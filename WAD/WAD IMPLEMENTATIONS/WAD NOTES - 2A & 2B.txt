@@ -1,0 +1,151 @@
+3] 2A - Create Version Control account on GitHub
+
+NEED :
+- VS CODE
+- GIT Windows
+- GitHub account
+
+- process :
+
+~ open vs code 
+~ create folder and open in vs code
+
+
+- Commands:
+~ mkdir Part-A
+~ cd Part-A
+~ git --version
+
+- create new repo on github:
+~ account - developer0228 , pss - github008
+~ wadassignment2a
+
+STEP 1:
+--------
+
+- Create a file in vs code folder:
+~ file1.txt
+~ In that add
+  - Name: Onkar SHirke
+  - Class: TE
+  - Subject: LP- 2 WAD
+  - Desc. : This is file 1
+
+-Commands:
+~ git init
+~ git add .
+~ git status
+~ git remote add origin "https://github.com/developer0228/wadassign......"
+~ git commit -m "First Commit"
+~ git status
+~ git push -u origin master
+
+
+STEP 2:
+--------
+- CREATE FILE IN Part A FOLDER
+~ file2.txt
+
+- in that add
+
+  - Name: Onkar SHirke
+  - Class: TE
+  - Subject: LP- 2 WAD
+  - Desc. : This is file 2
+
+- COMMANDS :
+~ git status
+~ git add .
+~ git status
+~ git commit -m "Second Commit"
+~ git push -u origin master
+
+
+{
+   If shown : to authenticate the user, type the following commands:
+   
+   git config --global user.gmail "onkarshirke2409@gmail.com"
+   
+   git config --global user.name "developer0228"  
+   [MAY REQUIRE Double quotes or may not]
+}
+[NOTES: Git is popular version control which allows us to track code changes
+        who made code changes, and coding in collaboration, allows to manage our repos.
+        , gives full time history of the Commit, we can also rollback to the major commit.]
+
+[NOTES: GitHub makes tools that uses GIT, GITHUB is web base interface that uses git,
+        Also controls the versions as separate people can make separate changes to the code
+        and software. Basically it allows people to make changes at the same time, therefore it is 
+ Hence, it is web base interface and has version controlling]
+
+
+
+
+-----------------------------------------------------------------
+
+
+
+2] 2b - Create Docker Container Environment
+
+
+- Download :
+~ Docker Desktop  -64 bit
+~ Download Node js - 64 bit
+
+- need vs code
+
+- search on windows search bar:
+~ Docker quick start terminal
+
+- on Docker quick start terminal
+- Type:
+
+~ docker --version
+
+- install:
+~ extension on vs code Docker
+
+- create a folder on desktop and open in vs code:
+~ name of folder in lower case only 
+~ name: partb
+
+- create docker file in this folder:
+~ Name : Dockerfile
+
+- create js file named:
+~ onkar.js
+
+- type:(inside onkar.js)
+~ console.log("Name: Onkar Shirke");
+~ console.log("Class: TE");
+~ console.log("Subject: lP - 2 WAD");
+~ console.log("Assignment: 2b");
+
+
+- type: (inside Dockerfile)
+~ FROM node: alpine
+~ COPY . /partb
+~ CMD node /partb/onkar.js
+
+
+- Open the terminal:
+~ cd partb
+~ docker --version
+~ if required - ( node onkar.js )
+~ docker build -t partb .
+~ docker images
+
+- on terminal it will show in tabular form "repo" , "tag", 
+- "image id",  "created size"
+
+#NOTES:
+- Docker is an Open platform which is used for developing, shipping and running
+- it provides an ability to run an application in loosely isolated environment
+- it is nothing but the container.
+- Because of this isolation and security we can run many conatiners simultaneously
+- on a given host
+- So if you have developed a software and you have given it to the testing team
+- or other developer, if that tester found some bug then it will not send that
+- appl. or soft. to you it will make changes to the same image id because we are 
+- sharing image if same with that developer and will remove bug, then it will send it to testing 
+- testing team and then to the customer

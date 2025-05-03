@@ -1,0 +1,425 @@
+1] 1A - Create responsive webpage using HTML, CSS and bootstrap
+
+ - Commands
+ ~ python -m http.server 8000
+
+ type on search bar localhost:8000
+
+ ----
+ Explaination:
+  HTML Structure (index.html):
+
+The main HTML file defines the structure of the dashboard page.
+It includes a top navigation bar with search and user menu.
+A sidebar navigation menu is implemented using Bootstrap's offcanvas component.
+The main content area contains cards, charts, and a data table to display information.
+CSS Styling:
+
+Bootstrap 5 is used for responsive layout and styling of components like navbar, cards, buttons, and grid system.
+Custom styles are applied via css/style.css.
+DataTables Bootstrap CSS is used to style the data table.
+JavaScript Functionality:
+
+Bootstrap's JavaScript bundle enables interactive components like the offcanvas sidebar and dropdown menus.
+Chart.js is used to render charts in the dashboard cards.
+jQuery and DataTables provide advanced table features like sorting, searching, and pagination.
+Custom JavaScript in js/script.js likely initializes charts and DataTables and handles any additional interactivity.
+Project Usage:
+
+This is a static frontend project with no backend.
+You can run it by opening index.html in a browser or serving it via a local HTTP server (e.g., python -m http.server).
+The dashboard displays sample data in cards, charts, and tables to demonstrate layout and functionality.
+ 
+
+
+
+----------------------------------------------------------------------
+
+
+
+
+2] 1B - Write JavaScript Program with AJAX post method
+
+pass on the commands:
+
+~ start index.html
+
+- make sure the vs code window closes 
+- you can enable / disable the link which give pre registered name https://jsonplaceholder.typicode.com/users
+
+----
+Explaination:
+
+Explanation of the project:
+
+Project Overview:
+This is a simple frontend web application that displays a list of users fetched from an external API.
+Users can be added via a form, and the new user data is posted to the API.
+The user data is stored temporarily in the browser's localStorage for display purposes.
+index.html:
+The main HTML file that structures the UI.
+Uses Bootstrap 4 for styling and layout.
+Contains a button to open a modal form for adding new users.
+Displays user data in a table with columns: Sr No, Name, Username, Email, Phone, City.
+Includes modal form inputs for user details: Email, Name, Username, City, Phone, Password.
+Loads main.js and Bootstrap dependencies via script tags.
+main.js:
+fetchData function:
+
+Sends a GET request to "https://jsonplaceholder.typicode.com/users" to fetch user data.
+Parses the response and stores it in localStorage under the key "users".
+Calls displayData to render the users in the table.
+displayData function:
+
+Retrieves the "users" data from localStorage.
+Iterates over the users and dynamically creates table rows with user details.
+Inserts the rows into the tbody element with id "tbody".
+Event listener on the Submit button:
+
+Collects input values from the modal form.
+Constructs a user object with the collected data.
+Sends a POST request to "https://jsonplaceholder.typicode.com/users/" with the user data.
+On successful response (status 201), prepends the new user to the localStorage "users" array.
+Calls displayData to update the table with the new user.
+Data Storage:
+User data is fetched from and posted to the external API "https://jsonplaceholder.typicode.com/users".
+Data is cached in localStorage for display and manipulation during the session.
+No backend or database is part of this project; it relies on the external API.
+How to Run:
+Open index.html in a web browser.
+The app will fetch and display users automatically.
+Use the "Add New User" button to open the form and add users.
+
+
+
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+3] 2A - Create Version Control account on GitHub
+
+~ download git bash
+~ create or login to GitHub account
+~ account - developer0228 , pss - github008
+~ create repo in GitHub account (choose public), create without readme file
+~ Then push your practical to GitHub using that commands.
+~ for that open git bash 
+
+- Apply the commands to activate git bash:
+
+~ git init
+~ git add --a
+~ git commit -m "Responsive Web Page"
+~ git remote add origin https://github.com/.....git
+~ git push -u origin main
+
+- Go to settings of GitHub.com
+- At Left side go to developer settings
+- Personal Access Tokens, Tokens(classic)
+- At the main page click on generate new token (classic)
+- Give - all note , select all till end - reppo, workflow, writepackagges, admin.org till end etc
+- Now click Generate token.
+- copy token id
+- continue with bash command  put git push -u origin  main
+- Give your username of GitHub and password as (Generated Token)
+- Now you can see all the files are pushed using git bash commands using token to github
+
+# Now if we want to change a single file 
+- for eg. login page folder , inside there is one file then
+
+~ git add --a
+~ git commit -m "login page added"
+~ git push -u origin main
+- give login name and password (token generated)
+
+Therefore, you can make such changes using git.
+
+
+
+
+
+------------------------------------------------------------------------
+
+
+
+
+3] 2B - Create Docker Container
+
+- install Docker
+
+- commands
+
+~ docker -v
+~ docker images
+~ docker ps
+
+go to the docker hub container image on Google
+
+search OpenJDK on docker hub (you can search any image you want eg: python)
+link ~ https://hub.docker.com
+-command
+
+~ docker pull OpenJDK
+~ docker image
+~ docker images 
+~ docker run JAVA -it -d OpenJDK
+~ docker ps
+~ docker exec -it JAVA jshell
+~ System.out.println("Hello Docker")
+~ int a=10
+~ int b=29
+~ System.out.println(a+b);
+~ docker ps
+~ /exit (if and only if want to close the container)
+~ docker ps
+~ docker container "paste the container id"
+~ docker stop "paste the container id"
+~ docker container rm "paste the container id"
+~ docker ps
+~ docker images 
+~ docker image prune (if and only if want to remove all the docker images)
+
+
+
+
+--------------------------------------------------------------------
+
+
+
+4] 2C - Create Angular Application:
+
+
+for the angular apl.
+
+commands:
+
+~ npm install 
+~ npm start
+
+
+
+
+-------------------------------------------------------------------
+
+
+
+
+5] 3A - Create Nodejs Application:
+
+-use the all project from the folder Assignment3-A
+- after THAT:
+
+Pass Commands:
+
+~ npm install
+
+~ node app.js
+
+- RUN ON localhost:3000
+
+-------
+explaination:
+The project is a simple web application implemented using Node.js with the Express framework to serve static HTML pages. Here's a code-wise and implementation-wise explanation:
+
+app.js:
+This is the main server file using Express.js.
+It sets up an Express app listening on port 3000.
+Defines three routes: '/', '/about', and '/contact'.
+Each route serves a corresponding static HTML file from the 'public' directory (home.html, about.html, contact.html).
+The server logs a message when it starts listening.
+HTML Pages (public/home.html, public/about.html, public/contact.html):
+These are static HTML pages styled with Bootstrap 5.
+Each page includes a navigation bar built with Bootstrap components.
+The navigation bar contains links to Home, About, and Contact pages, matching the Express routes.
+The home page includes a welcoming message and some placeholder text.
+The pages link to Bootstrap CSS and JS via CDN for responsive design and styling.
+nav.html:
+Contains a Bootstrap-based navigation bar markup.
+However, this file appears to be standalone and is not included in the main HTML pages, which have their own navbars.
+Styling (public/css/custom.css):
+Contains custom CSS styles.
+For example, the '.homepage' class adds background color, margin, padding, and border-radius to the main container on the home page.
+Overall Implementation:
+
+The project is a basic multi-page website served by an Express server.
+The server handles routing to serve static HTML files.
+The frontend uses Bootstrap for responsive UI components and styling.
+Custom CSS is applied for additional styling.
+The navigation bar is duplicated in each HTML page rather than being included from a common file.
+This setup is suitable for small websites or demos where server-side rendering is minimal, and static pages are served directly. The use of Express allows easy extension to add dynamic routes or APIs if needed.
+
+
+Task Completed
+The project is a simple web application implemented using Node.js with the Express framework to serve static HTML pages. Here's a code-wise and implementation-wise explanation:
+
+app.js:
+This is the main server file using Express.js.
+It sets up an Express app listening on port 3000.
+Defines three routes: '/', '/about', and '/contact'.
+Each route serves a corresponding static HTML file from the 'public' directory (home.html, about.html, contact.html).
+The server logs a message when it starts listening.
+HTML Pages (public/home.html, public/about.html, public/contact.html):
+These are static HTML pages styled with Bootstrap 5.
+Each page includes a navigation bar built with Bootstrap components.
+The navigation bar contains links to Home, About, and Contact pages, matching the Express routes.
+The home page includes a welcoming message and some placeholder text.
+The pages link to Bootstrap CSS and JS via CDN for responsive design and styling.
+nav.html:
+Contains a Bootstrap-based navigation bar markup.
+However, this file appears to be standalone and is not included in the main HTML pages, which have their own navbars.
+Styling (public/css/custom.css):
+Contains custom CSS styles.
+For example, the '.homepage' class adds background color, margin, padding, and border-radius to the main container on the home page.
+Overall Implementation:
+
+The project is a basic multi-page website served by an Express server.
+The server handles routing to serve static HTML files.
+The frontend uses Bootstrap for responsive UI components and styling.
+Custom CSS is applied for additional styling.
+The navigation bar is duplicated in each HTML page rather than being included from a common file.
+This setup is suitable for small websites or demos where server-side rendering is minimal, and static pages are served directly. The use of
+Express allows easy extension to add dynamic routes or APIs if needed.
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+
+
+
+
+6] 3B - Create 4 API using Node js
+
+- create a folder of assignment on any drive
+- open that folder in vs code 
+- Then after opening folder in vs code , open terminal (powershell or cmd)
+
+- commands:
+~ npm init
+~ hit enter till is this ok
+
+- create index.js
+- install mongo db compass
+- connect mongo db compass
+
+- use command:
+~ show dbs (in mongoosh)
+~ use student
+~ db.createCollection('profile')
+~ db.profile.insertOne({name:"Rohit", email:"rohit@gmail.com", city:"Pune"})
+- Now go to VS code again
+
+- create a separate file named mongodb.js
+- command
+~ npm i mongodb
+~ npm i express
+
+- Then follow the given code and files in folder
+- after writing code of index.js and mongodb.js
+
+-COMMAND
+~ node index.js
+
+- open POSTMAN Apply: (As the mongo db data is fetch by GET Api in postman)
+~ GET API and search localhost:3000/
+
+- follow the comments given in the code for POST Api
+- using POSTMAN 
+
+# After Following basic up commands just follow the comments from the code
+
+
+
+-------------
+#explaination:
+
+This project is a simple Node.js application using Express.js to create a RESTful API server that interacts with a MongoDB database.
+
+Code-wise and implementation-wise, here is how the project works:
+
+Database Connection (mongodb.js):
+The project uses the official MongoDB Node.js driver.
+It connects to a MongoDB server running locally at "mongodb://localhost:27017".
+It connects specifically to a database named "student".
+The dbConnect function connects to the database and returns the "profile" collection, which is used for all database operations.
+Server and API Endpoints (index.js):
+The Express.js framework is used to create the server.
+The server listens on port 3000.
+The server uses express.json() middleware to parse JSON request bodies.
+It imports the dbConnect function to interact with the MongoDB collection.
+API Endpoints:
+GET /getData: Fetches all documents from the "profile" collection and returns them as a JSON array.
+POST /insertData: Inserts a new document into the "profile" collection. The document data is expected in the JSON body of the request.
+PUT /updateData/:name: Updates a document in the "profile" collection where the "name" field matches the URL parameter. The updated data is taken from the JSON request body.
+DELETE /deleteData/:name: Deletes a document from the "profile" collection where the "name" field matches the URL parameter.
+Usage:
+The project is designed to be tested using Postman or any API testing tool.
+The comments in index.js provide detailed instructions on how to test each API endpoint.
+Overall, this project demonstrates a basic CRUD API implementation using Node.js, Express, and MongoDB, suitable for managing a collection of user profiles.
+
+
+
+
+
+
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+7] 4A - Create a simple mobile website using jQuery mobile:
+
+- simply open the project from the folder and and run on the normal run server
+
+
+
+
+-----
+explaination:
+
+This project is a simple static web page implemented using HTML and jQuery Mobile. Here's a detailed explanation of the code and its implementation:
+
+HTML Structure:
+The document is a standard HTML5 document with a <head> and <body>.
+The <head> includes meta tags for character set and viewport for responsive design.
+The title of the page is "table demo".
+It links to jQuery Mobile CSS and JavaScript libraries hosted on CDN, as well as jQuery itself.
+jQuery Mobile:
+jQuery Mobile is a framework that provides UI components optimized for mobile devices.
+The CSS and JS files for jQuery Mobile are included to style and enable mobile-friendly UI widgets.
+Body Content:
+The content is centered using a <center> tag.
+Inside, there is a <div> with data-role="page", which defines a jQuery Mobile page.
+The page contains a heading "Company Website" and a subheading "Company Information Table".
+There is a <div> with data-role="header" and id "GFG" which acts as a header container.
+Inside this header div, there is a main content div with class "ui-content" that contains a table.
+Table:
+The table has data-role="table" which applies jQuery Mobile table styling.
+The table header defines three columns: Company, Department, and Domain.
+The table body contains one row with sample data:
+Company: "Lorem, ipsum."
+Department: "Computer Science"
+Domain: A clickable link to "https://pict.edu/" that opens externally.
+Button and Log:
+Below the table, there is an input button with id "Button" labeled "Value of the classes option".
+There is a <div> with id "log" to display output.
+JavaScript:
+When the document is ready, the script initializes the table widget on the div with id "GFG" and sets a custom option classes.Name to "GeeksforGeeks".
+It then explicitly sets the option classes.Name again.
+When the button is clicked, it retrieves the value of the classes.Name option from the table widget and displays it inside the "log" div.
+Summary:
+
+This project demonstrates a simple mobile-friendly table using jQuery Mobile.
+It shows how to initialize a jQuery Mobile widget with options and interact with it via JavaScript.
+The button click event demonstrates reading a widget option and displaying it dynamically.
+This is a basic example of using jQuery Mobile to create interactive UI components on a static HTML page.
