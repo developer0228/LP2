@@ -1,0 +1,18 @@
+Canada VPN Server: CA149.vpnbook.com
+Germany VPN Server: DE20.vpnbook.com
+France VPN Server: FR200.vpnbook.com
+Poland VPN Server: PL134.vpnbook.com
+UK VPN Server: UK205.vpnbook.com
+Following servers are optimized for fast web surfing; no p2p downloading
+US VPN Server: US16.vpnbook.com
+US VPN Server: US178.vpnbook.com
+Canada VPN Server: CA196.vpnbook.com
+Germany VPN Server: DE220.vpnbook.com
+France VPN Server: FR231.vpnbook.com
+Poland VPN Server: PL140.vpnbook.com
+UK VPN Server: UK68.vpnbook.com
+
+
+Username: vpnbook
+
+Password: huba7re
